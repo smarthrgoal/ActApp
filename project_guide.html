@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: 'Arial', sans-serif; line-height: 1.6; background-color: #f4f7f6; color: #333; padding: 20px; }
+        .container { max-width: 900px; margin: auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h1, h2 { color: #2c3e50; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: center; }
+        th { background-color: #3498db; color: white; }
+        .code-box { background: #f8f8f8; padding: 15px; border-left: 5px solid #3498db; margin: 10px 0; font-family: monospace; }
+        .img-placeholder { height: 200px; background: #ddd; display: flex; align-items: center; justify-content: center; margin: 10px; border: 2px dashed #999; color: #666; font-weight: bold; }
+        .row-imgs { display: flex; justify-content: space-around; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>خارطة طريق بناء تطبيق "نشاط" عبر MIT App Inventor</h1>
+        
+        <h2>1. مراحل تنفيذ التطبيق</h2>
+        <ol>
+            <li><strong>تصميم الواجهات:</strong> بناء شاشات (التسجيل، الرمز، الصفحة الرئيسية) باستخدام Layouts لتنظيم الـ Tabs والـ Footer.</li>
+            <li><strong>إدارة البيانات:</strong> ربط الأماكن والمهتمين بقاعدة بيانات.</li>
+            <li><strong>المنطق البرمجي:</strong> استخدام اللبنات (Blocks) لبرمجة التفاعل بين الشاشات والبيانات.</li>
+        </ol>
+
+        <h2>2. مقارنة قواعد البيانات: TinyDB vs Firebase</h2>
+        <table>
+            <tr>
+                <th>وجه المقارنة</th>
+                <th>TinyDB</th>
+                <th>Firebase</th>
+            </tr>
+            <tr>
+                <td>طبيعة التخزين</td>
+                <td>محلي (على هاتف المستخدم)</td>
+                <td>سحابي (عبر الإنترنت)</td>
+            </tr>
+            <tr>
+                <td>مشاركة البيانات</td>
+                <td>لا يمكن مشاركة البيانات بين المستخدمين</td>
+                <td>تسمح بمشاركة البيانات لحظياً بين المستخدمين</td>
+            </tr>
+            <tr>
+                <td>الاستخدام الأمثل</td>
+                <td>حفظ إعدادات بسيطة أو بيانات خاصة</td>
+                <td>تطبيقات التواصل، الأماكن، والبيانات المشتركة</td>
+            </tr>
+        </table>
+
+        <h2>3. أمثلة برمجية</h2>
+        <p><strong>استخدام TinyDB (لحفظ اسم المستخدم محلياً):</strong></p>
+        <div class="code-box">call TinyDB.StoreValue(tag="userName", value="أحمد")</div>
+        
+        <p><strong>استخدام Firebase (لحفظ مكان جديد):</strong></p>
+        <div class="code-box">call FirebaseDB.StoreValue(tag="مكان_جديد", valueList=(اسم_المكان, الموقع))</div>
+
+        <h2>4. عرض تصاميم التطبيق</h2>
+        <div class="row-imgs">
+            <div class="img-placeholder">صورة 1: صفحة التسجيل</div>
+            <div class="img-placeholder">صورة 2: صفحة الرئيسية (Tabs)</div>
+            <div class="img-placeholder">صورة 3: صفحة تفاصيل المكان</div>
+        </div>
+    </div>
+</body>
+</html>
